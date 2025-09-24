@@ -1,6 +1,5 @@
 // app/page.js
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,28 +7,26 @@ export default function Home() {
       {/* HERO */}
       <section className="card hero">
         <div className="hero-left">
-          <h1 className="title">Gabriel Araújo</h1>
+          <h1 className="title">Gabriel de Souza Leão Araújo</h1>
           <p className="subtitle">
-            Estagiário em QA (CIn Motorola) · Bacharel em formação, Ciência da Computação — UNICAP
+            Software Tester · Computer Science Student (UNICAP) · Python, Java & SQL ·
+            Interested in Software Quality, Data Science & Automation · FCE (B2) Certified
           </p>
-          <div className="actions">
-            <Link className="btn" href="/forca" prefetch={false}>Jogo da Forca</Link>
-            <a className="btn secondary" href="mailto:gabrielsla2022@gmail.com">Contato</a>
-          </div>
 
           <div className="hero-pills">
-            <span className="pill">Automação de Testes · Python/Selenium</span>
+            <span className="pill">QA & Test Automation</span>
+            <span className="pill">Python / Selenium</span>
             <span className="pill">Java · Estruturas de Dados</span>
-            <span className="pill">Machine Learning · Data Science</span>
-            <span className="pill">Inglês Cambridge (CAE)</span>
+            <span className="pill">Data Science / ML</span>
+            <span className="pill">FCE Cambridge (B2)</span>
           </div>
         </div>
 
         <div className="hero-right">
           <div className="avatar-wrap">
             <Image
-              src="/me.jpg"
-              alt="Foto de Gabriel Araújo"
+              src="/me.jpg"            // coloque sua foto em /public/me.jpg
+              alt="Gabriel Araújo"
               width={200}
               height={200}
               className="avatar"
@@ -39,130 +36,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BLOCO ACADÊMICO + ESTÁGIO */}
+      {/* ABOUT */}
+      <section className="card section">
+        <h2 className="section-title">About</h2>
+        <p style={{ opacity: 0.9, lineHeight: 1.6, margin: 0 }}>
+          I am a Computer Science student at the Catholic University of Pernambuco (UNICAP), currently in the 5th semester.
+          I have experience as a Software Tester at Motorola (CIn/Motorola Project), with knowledge in Python, C, Java, and SQL.
+          Passionate about software quality and technology, eager to learn more about computing, improve teamwork, and apply my skills in real projects.
+          Certified in FCE Cambridge (B2 English).
+        </p>
+      </section>
+
+      {/* EXPERIENCE + EDUCATION */}
       <section className="grid">
         <div className="card">
-          <h2 className="section-title">Acadêmico — UNICAP</h2>
-          <div className="kv">
-            <div>Curso</div>
-            <div>Ciência da Computação</div>
-
-            <div>Disciplinas atuais</div>
-            <div className="tags">
-              <span className="tag">Estruturas de Dados (Java)</span>
-              <span className="tag">Engenharia de Software</span>
-              <span className="tag">Banco de Dados (SQL)</span>
-              <span className="tag">Robótica</span>
-              <span className="tag">Estatística</span>
-            </div>
-
-            <div>Fundamentos de base</div>
-            <div className="tags">
-              <span className="tag">Cálculo</span>
-              <span className="tag">Álgebra Linear</span>
-              <span className="tag">Geometria Analítica</span>
-              <span className="tag">Métodos Numéricos</span>
-              <span className="tag">Física Geral</span>
-              <span className="tag">Sistemas Digitais</span>
-              <span className="tag">Arquitetura & SO</span>
-              <span className="tag">Compiladores</span>
+          <h2 className="section-title">Experience</h2>
+          <div className="timeline">
+            <div className="tl-item">
+              <div className="tl-head">
+                <strong>Software Tester — Projeto CIn/Motorola</strong>
+                <span className="tl-meta">Part-time · Aug 2025 — Present</span>
+              </div>
+              <ul className="list">
+                <li>Writing and executing test cases.</li>
+                <li>Working with <strong>Python</strong> for test automation.</li>
+                <li>Identifying and reporting bugs.</li>
+                <li><strong>Collaboration</strong> with development team to improve software quality.</li>
+                <li><strong>Software Quality</strong>.</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div className="card">
-          <h2 className="section-title">Estágio — CIn Motorola (Regression Testing)</h2>
-          <ul className="list">
-            <li>Automação de testes com <strong>Python + Selenium</strong>.</li>
-            <li>Testes funcionais e de regressão, foco em qualidade contínua.</li>
-            <li>Ampliar cobertura, suites estáveis e relatórios.</li>
-          </ul>
+          <h2 className="section-title">Education & Certifications</h2>
+          <div className="kv">
+            <div>University</div>
+            <div>
+              <strong>Universidade Católica de Pernambuco (UNICAP)</strong> — BSc Computer Science<br/>
+              Aug 2023 — Aug 2027
+            </div>
 
-          <h3 className="section-sub">Stack & Ferramentas</h3>
-          <div className="tags">
-            <span className="tag">Python</span>
-            <span className="tag">Selenium</span>
-            <span className="tag">PyTest</span>
-            <span className="tag">Java</span>
-            <span className="tag">SQL</span>
-            <span className="tag">Git</span>
-            <span className="tag">React/Next</span>
+            <div>Certification</div>
+            <div>
+              <strong>Monitoria em Disciplina de Cálculo 1, 2 e 3</strong> — UNICAP (Issued Aug 2024)
+            </div>
+
+            <div>Certification</div>
+            <div>
+              <strong>First Cambridge Exam (FCE)</strong> — English Certification<br/>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO NOVA: RESUMO POR CATEGORIAS */}
-      <section className="card section">
-        <h2 className="section-title">Resumo por Categorias</h2>
-        <div className="cats">
-          <div className="cat">
-            <div className="cat-title">Universidade</div>
-            <ul className="list">
-              <li>UNICAP — Ciência da Computação</li>
-              <li>Rotina: manhã (7:30–12:50), revisões rápidas entre aulas</li>
-            </ul>
-          </div>
-
-          <div className="cat">
-            <div className="cat-title">Disciplinas</div>
-            <div className="tags">
-              <span className="tag">ED (Java)</span>
-              <span className="tag">Eng. de Software</span>
-              <span className="tag">BD (SQL)</span>
-              <span className="tag">Robótica</span>
-              <span className="tag">Estatística</span>
-            </div>
-          </div>
-
-          <div className="cat">
-            <div className="cat-title">Estágio</div>
-            <ul className="list">
-              <li>CIn Motorola — Regression Testing</li>
-              <li>Automação (Python/Selenium), análise de falhas, documentação</li>
-            </ul>
-          </div>
-
-          <div className="cat">
-            <div className="cat-title">Stack</div>
-            <div className="tags">
-              <span className="tag">Python</span>
-              <span className="tag">Selenium</span>
-              <span className="tag">PyTest</span>
-              <span className="tag">Java</span>
-              <span className="tag">SQL</span>
-              <span className="tag">Git</span>
-              <span className="tag">React/Next</span>
-            </div>
-          </div>
-
-          <div className="cat">
-            <div className="cat-title">Rotina</div>
-            <ul className="list">
-              <li>Tarde: Estágio QA</li>
-              <li>Noite: Estudos dirigidos + Cambridge + ML (dias específicos)</li>
-              <li>Treinos: academia/jiu-jitsu ~1h (hipertrofia, força, resistência)</li>
-            </ul>
-          </div>
-
-          <div className="cat">
-            <div className="cat-title">Projetos</div>
-            <ul className="list">
-              <li>Portfólio em Next.js + Forca (Pokémon)</li>
-              <li>Suites de regressão em Selenium</li>
-              <li>ML — Joel Grus + exercícios</li>
-            </ul>
-          </div>
-
-          <div className="cat">
-            <div className="cat-title">Metas 2025</div>
-            <ul className="list">
-              <li>Consolidar Java (ED) e Eng. de Software</li>
-              <li>Elevar maturidade em QA (pirâmide, ambientes, relatórios)</li>
-              <li>Projetos pequenos de ML — bem documentados</li>
-              <li>CAE (Cambridge): prática diária</li>
-            </ul>
+      {/* SKILLS & LANGUAGES */}
+      <section className="grid">
+        <div className="card">
+          <h2 className="section-title">Top Skills</h2>
+        <div className="tags">
+            <span className="tag">Java</span>
+            <span className="tag">Python</span>
+            <span className="tag">Git</span>
+            <span className="tag">Software Testing</span>
+            <span className="tag">Test Automation</span>
+            <span className="tag">SQL</span>
+            <span className="tag">C</span>
+            <span className="tag">Selenium</span>
           </div>
         </div>
+
+        <div className="card">
+          <h2 className="section-title">Languages</h2>
+          <div className="kv">
+            <div>English</div>
+            <div>Professional working proficiency (FCE – B2)</div>
+            <div>Português</div>
+            <div>Native or bilingual proficiency</div>
+          </div>
+        </div>
+      </section>
+
+      {/* CURRENT FOCUS */}
+      <section className="card section">
+        <h2 className="section-title">Main Goal</h2>
+        <ul className="list">
+          <li>Studying Computer Science (UNICAP)</li>
+          <li>Focus on <strong>Python</strong> Development</li>
+          <li>Also studying: <strong>Python, C, Java e SQL</strong></li>
+          <li>Exploring <strong>Automatized Tests</strong> and Clean Codes on Softwares</li>
+          <li>Exploring <strong>Machine Learning</strong> e Data Science</li>
+        </ul>
+      </section>
+
+      {/* MAIN GOALS */}
+      <section className="card section">
+        <h2 className="section-title">Also Reading</h2>
+        <ul className="list">
+          <li>Reading <em>Data Science do Zero</em> — Joel Grus</li>
+          <li>Reading <em>Mãos à Obra: Aprendizado de Máquina</em> — Aurélien Géron</li>
+          <li>Reading <em>Artificial Intelligence</em> — Stuart Russell</li>
+          <li>Read <em>Foundations of Software Testing (ISTBQ)</em> — Dorothy Graham ✅</li>
+          <li>Reading <em>Design Patterns</em> — Erich Gamma</li>
+        </ul>
       </section>
     </main>
   );

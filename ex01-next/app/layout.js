@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
           <nav className="nav">
             <Link className="logo" href="/" prefetch={false}>GA</Link>
             <div className="links">
-              <Link href="/" prefetch={false}>Currículo</Link>
               <Link href="/forca" prefetch={false}>Jogo da Forca</Link>
             </div>
           </nav>
@@ -27,7 +26,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer className="footer">
-          Feito por Gabriel Araújo • {new Date().getFullYear()}
+          Made by Gabriel S.L. Araújo • {new Date().getFullYear()}
         </footer>
       </body>
     </html>

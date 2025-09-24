@@ -131,4 +131,7 @@ svg{max-width:300px}
   font-weight:700; margin-bottom:8px; opacity:.95;
 }
 
-
+.timeline{ display:grid; gap:12px; }
+.tl-item{ border:1px solid #333; border-radius:14px; padding:14px; background:rgba(255,255,255,.02); }
+.tl-head{ display:flex; flex-direction:column; gap:4px; margin-bottom:6px; }
+.tl-meta{ font-size:12px; opacity:.7; }

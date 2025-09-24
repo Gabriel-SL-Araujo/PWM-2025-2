@@ -114,8 +114,6 @@ export default function ForcaPage() {
             Voltar
         </button>
     </div>
-
-      <p className="meta">Palavras: Pokémon (≥30). SVG para boneco. Teclado virtual e físico.</p>
     </main>
   );
 }
