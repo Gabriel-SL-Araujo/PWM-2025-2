@@ -48,22 +48,20 @@ export default function ForcaPage() {
     if (secret.includes(L)) setCorrect(p => [...p, L]); else setWrong(p => [...p, L]);
   };
 
-  useEffect(() => {
-    if (status !== "playing") return;
+    useEffect(() => {
+        if (status !== "playing") return;
 
-    const h = (e) => {
-        // evita submits/atalhos que podem navegar
-        if (e.key === "Enter" || e.key === " ") return;
+        const h = (e) => {
+            if (e.key === "Enter" || e.key === " ") return; // evita navegação/submit
+            const k = e.key?.toUpperCase();
+            if (/^[A-Z]$/.test(k)) {
+            e.preventDefault();
+            tryLetter(k);
+            }
+        };
 
-        const k = e.key?.toUpperCase();
-        if (/^[A-Z]$/.test(k)) {
-        e.preventDefault();
-        tryLetter(k);
-        }
-    };
-
-    window.addEventListener("keydown", h);
-    return () => window.removeEventListener("keydown", h);
+        window.addEventListener("keydown", h);
+        return () => window.removeEventListener("keydown", h);
     }, [status, secret, correct, wrong]);
 
 
@@ -100,7 +98,19 @@ export default function ForcaPage() {
 
       <div style={{display:"flex", gap:12, justifyContent:"center", marginTop:12}}>
         <button className="btn" onClick={start} type="button">Reiniciar</button>
-        <button className="btn secondary" type="button" onClick={() => router.push("/")}>
+        <button
+            className="btn secondary"
+            type="button"
+            onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof window !== "undefined" && window.history.length > 1) {
+                router.back();         // volta no histórico quando possível
+            } else {
+                router.replace("/");   // fallback estável para a home
+            }
+            }}
+        >
             Voltar
         </button>
     </div>
