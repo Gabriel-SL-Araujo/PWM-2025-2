@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="container">
-      {/* HERO */}
       <section className="card hero">
         <div className="hero-left">
           <h1 className="title">Gabriel de Souza Leão Araújo</h1>
@@ -25,7 +24,7 @@ export default function Home() {
         <div className="hero-right">
           <div className="avatar-wrap">
             <Image
-              src="/me.jpg"            // coloque sua foto em /public/me.jpg
+              src="/me.jpg"           
               alt="Gabriel Araújo"
               width={200}
               height={200}
@@ -36,7 +35,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
       <section className="card section">
         <h2 className="section-title">About</h2>
         <p style={{ opacity: 0.9, lineHeight: 1.6, margin: 0 }}>
@@ -47,7 +45,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* EXPERIENCE + EDUCATION */}
       <section className="grid">
         <div className="card">
           <h2 className="section-title">Experience</h2>
@@ -90,7 +87,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SKILLS & LANGUAGES */}
       <section className="grid">
         <div className="card">
           <h2 className="section-title">Top Skills</h2>
@@ -117,7 +113,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CURRENT FOCUS */}
       <section className="card section">
         <h2 className="section-title">Main Goal</h2>
         <ul className="list">
@@ -129,7 +124,6 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* MAIN GOALS */}
       <section className="card section">
         <h2 className="section-title">Also Reading</h2>
         <ul className="list">

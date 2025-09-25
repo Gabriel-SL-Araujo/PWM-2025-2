@@ -52,7 +52,7 @@ export default function ForcaPage() {
         if (status !== "playing") return;
 
         const h = (e) => {
-            if (e.key === "Enter" || e.key === " ") return; // evita navegação/submit
+            if (e.key === "Enter" || e.key === " ") return;
             const k = e.key?.toUpperCase();
             if (/^[A-Z]$/.test(k)) {
             e.preventDefault();
@@ -105,9 +105,9 @@ export default function ForcaPage() {
             e.preventDefault();
             e.stopPropagation();
             if (typeof window !== "undefined" && window.history.length > 1) {
-                router.back();         // volta no histórico quando possível
+                router.back();         
             } else {
-                router.replace("/");   // fallback estável para a home
+                router.replace("/");   
             }
             }}
         >
